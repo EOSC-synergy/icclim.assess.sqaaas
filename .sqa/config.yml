@@ -1,0 +1,62 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.11
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/cerfacs-globc/icclim:
+      branch: master
+      repo: https://github.com/cerfacs-globc/icclim
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/cerfacs-globc/icclim git:
+        commands:
+        - /usr/bin/env sh .sqa/script.snappy-aqua-hare.sh
+        container: qc.acc_fuzzy-white-ibis
+  QC.Doc:
+    repos:
+      github.com/cerfacs-globc/icclim find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.stuffy-blue-insect.sh
+        container: qc.doc_queasy-corn-chamois
+      github.com/cerfacs-globc/icclim git:
+        commands:
+        - /usr/bin/env sh .sqa/script.pokey-aqua-bison.sh
+        container: qc.doc_scummy-magnolia-sponge
+      github.com/cerfacs-globc/icclim markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.scummy-vermilion-barracuda.sh
+        container: qc.doc_sleazy-platinum-quetzal
+      github.com/cerfacs-globc/icclim restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.nippy-ecru-barnacle.sh
+        container: qc.doc_bluesy-flax-crocodile
+  QC.Lic:
+    repos:
+      github.com/cerfacs-globc/icclim licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.ugly-platinum-bloodhound.sh
+        container: qc.lic_flimsy-sangria-penguin
+  QC.Sec:
+    repos:
+      github.com/cerfacs-globc/icclim bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.gummy-jade-alligator.sh
+        container: qc.sec_scaly-sapphire-zebra
+  QC.Sty:
+    repos:
+      github.com/cerfacs-globc/icclim flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.goopy-flax-buzzard.sh
+        container: qc.sty_wimpy-taupe-wallaby
+  QC.Ver:
+    repos:
+      github.com/cerfacs-globc/icclim get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.goopy-cerulean-starfish.sh
+        container: qc.ver_woolly-dandelion-numbat
+timeout: 5400
