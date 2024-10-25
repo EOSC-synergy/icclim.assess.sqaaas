@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/2.0.0
+      branch: main
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/cerfacs-globc/icclim:
       branch: master
@@ -15,54 +15,54 @@ sqa_criteria:
     repos:
       github.com/cerfacs-globc/icclim git:
         commands:
-        - /usr/bin/env sh .sqa/script.muggy-viridian-schnauzer.sh
-        container: qc.acc_flimsy-alizarin-raccoon
+        - /usr/bin/env sh .sqa/script.randy-dandelion-chinchilla.sh
+        container: qc.acc_messy-rose-markhor
   QC.Doc:
     repos:
       github.com/cerfacs-globc/icclim find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.chewy-puce-hummingbird.sh
-        container: qc.doc_pretty-ruby-olm
+        - /usr/bin/env sh .sqa/script.chummy-persimmon-goat.sh
+        container: qc.doc_geeky-razzmatazz-neanderthal
       github.com/cerfacs-globc/icclim git:
         commands:
-        - /usr/bin/env sh .sqa/script.sunny-yellow-dragonfly.sh
-        container: qc.doc_crappy-aqua-owl
+        - /usr/bin/env sh .sqa/script.dorky-amaranth-angelfish.sh
+        container: qc.doc_muggy-corn-eel
       github.com/cerfacs-globc/icclim markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.cloudy-firebrick-oriole.sh
-        container: qc.doc_fuzzy-emerald-hornet
+        - /usr/bin/env sh .sqa/script.sickly-alizarin-blue.sh
+        container: qc.doc_beady-sapphire-bulldog
       github.com/cerfacs-globc/icclim restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.thirsty-coral-loon.sh
-        container: qc.doc_foggy-vermilion-catfish
+        - /usr/bin/env sh .sqa/script.pretty-persimmon-dog.sh
+        container: qc.doc_lovely-lime-leopard
   QC.Lic:
     repos:
       github.com/cerfacs-globc/icclim licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-pear-alligator.sh
-        container: qc.lic_bluesy-seashell-rattlesnake
+        - /usr/bin/env sh .sqa/script.pokey-ivory-badger.sh
+        container: qc.lic_sleazy-salmon-dugong
   QC.Sec:
     repos:
       github.com/cerfacs-globc/icclim bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-brown-eagle.sh
-        container: qc.sec_crappy-teal-tarsier
+        - /usr/bin/env sh .sqa/script.scummy-tan-jaguar.sh
+        container: qc.sec_wheezy-ochre-mandrill
   QC.Sty:
     repos:
       github.com/cerfacs-globc/icclim flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.sickly-fuchsia-bongo.sh
-        container: qc.sty_wiggy-flax-raccoon
+        - /usr/bin/env sh .sqa/script.wiggy-eggplant-frog.sh
+        container: qc.sty_skimpy-gamboge-sheep
   QC.Uni:
     repos:
       github.com/cerfacs-globc/icclim pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-cobalt-eel.sh
-        container: qc.uni_messy-heliotrope-anteater
+        - /usr/bin/env sh .sqa/script.flimsy-pear-swan.sh
+        container: qc.uni_geeky-olive-gar
   QC.Ver:
     repos:
       github.com/cerfacs-globc/icclim get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.stealthy-pink-lionfish.sh
-        container: qc.ver_woolly-puce-impala
+        - /usr/bin/env sh .sqa/script.snoopy-teal-wildebeest.sh
+        container: qc.ver_woolly-asparagus-kiwi
 timeout: 5400
