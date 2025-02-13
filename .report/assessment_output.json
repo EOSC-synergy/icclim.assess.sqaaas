@@ -3406,58 +3406,58 @@
             "criteria": {
                 "bronze": {
                     "to_fulfill": [
-                        "QC.Acc",
+                        "QC.Doc",
                         "QC.Lic",
-                        "QC.Doc"
+                        "QC.Acc"
                     ],
                     "missing": [
                         "QC.Doc"
                     ],
                     "fulfilled": [
-                        "QC.Acc",
-                        "QC.Lic"
+                        "QC.Lic",
+                        "QC.Acc"
                     ]
                 },
                 "silver": {
                     "to_fulfill": [
-                        "QC.Met",
                         "QC.Acc",
                         "QC.Lic",
                         "QC.Ver",
-                        "QC.Doc"
+                        "QC.Doc",
+                        "QC.Met"
                     ],
                     "missing": [
-                        "QC.Met",
-                        "QC.Doc"
+                        "QC.Doc",
+                        "QC.Met"
                     ],
                     "fulfilled": [
-                        "QC.Acc",
+                        "QC.Ver",
                         "QC.Lic",
-                        "QC.Ver"
+                        "QC.Acc"
                     ]
                 },
                 "gold": {
                     "to_fulfill": [
-                        "QC.Met",
                         "QC.Acc",
-                        "QC.Lic",
-                        "QC.Sec",
                         "QC.Uni",
-                        "QC.Sty",
+                        "QC.Lic",
                         "QC.Ver",
-                        "QC.Doc"
+                        "QC.Sec",
+                        "QC.Doc",
+                        "QC.Met",
+                        "QC.Sty"
                     ],
                     "missing": [
-                        "QC.Met",
-                        "QC.Sec",
                         "QC.Uni",
-                        "QC.Sty",
-                        "QC.Doc"
+                        "QC.Sec",
+                        "QC.Doc",
+                        "QC.Met",
+                        "QC.Sty"
                     ],
                     "fulfilled": [
-                        "QC.Acc",
+                        "QC.Ver",
                         "QC.Lic",
-                        "QC.Ver"
+                        "QC.Acc"
                     ]
                 }
             },
